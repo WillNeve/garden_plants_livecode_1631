@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Gardens:</h1>
+  <div class="gardens-container">
+    <% @gordens.each do |garden| %>
+      <a href="<%= gorden_path(garden) %>"
+        class="garden-card"
+        style="background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url('<%= garden.banner_url %>')">
+        <h2><%= garden.name %></h2>
+      </a>
+    <% end %>
+  </div>
+</div>

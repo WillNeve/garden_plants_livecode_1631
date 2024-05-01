@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Plants#new</h1>
+  <p>Find me in app/views/plants/new.html.erb</p>
+
+  <%= simple_form_for [@gorden, @plant] do |form| %>
+    <%= form.input :name %>
+    <%= form.input :image_url %>
+
+    <%= form.submit %>
+  <% end %>
+</div>
+

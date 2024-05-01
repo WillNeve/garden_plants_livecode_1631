@@ -1,0 +1,21 @@
+<div class="garden-banner" alt="garden banner"
+     style="background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url('<%= @gorden.banner_url %>')">
+
+  <h1><%= @gorden.name %></h1>
+</div>
+
+
+<div class="container">
+  <%= link_to "➕", new_gorden_plant_path(@gorden) %>
+  <div class="plant-container">
+
+    <% @gorden.plants.each do |plant| %>
+      <div class="garden-card"
+            style="background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url('<%= plant.image_url %>')">
+        <h2><%= plant.name %></h2>
+      </div>
+    <% end %>
+
+  </div>
+  <%= link_to "Back to gardens", root_path %>
+</div>
